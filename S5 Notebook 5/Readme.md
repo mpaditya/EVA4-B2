@@ -1,4 +1,4 @@
-This is the second notebook/experiment for the S5 Assignment Solution. In this notebook, we have added Max Pooling and (1X1) Conv Blocks to previous model.
+This is the fifth notebook/experiment for the S5 Assignment Solution. In this notebook, we have added Max Pooling and (1X1) Conv Blocks to previous model.
 
 ### Target
 
