@@ -1,4 +1,4 @@
-This is the frist notebook/experiment for the S5 Assignment Solution. 
+This is the first notebook/experiment for the S5 Assignment Solution. 
 In this notebook, predominantly Convolution blocks have been used without any special layers to establish the baseline. 
 
 ### Target
