@@ -14,7 +14,7 @@ Total Parameters: 9910
 
 Best Training Accuracy: 98.96
 
-Best Test Accuracy: 99.40
+Best Test Accuracy: 99.41
 
 ### Analysis
 
