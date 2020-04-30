@@ -20,4 +20,4 @@ Best Test Accuracy: 99.41
 
 Model has attained test acuracy of 99.40 there may be scope for improvement.
 
-We can improve the test accuracy (reduce mis-classifications) by using Image Augmentation.the next Notebook.
+We can improve the test accuracy (reduce mis-classifications) by using Image Augmentation the next Notebook.
