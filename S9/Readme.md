@@ -4,12 +4,18 @@
 
 **Training Set Transforms:**
 HorizontalFlip
+
 Normalize
+
 Rotate
+
 Cutout
+
 HueSaturationValue
 
+
 **Test Set Transforms:**
+
 Normalize
 
 
