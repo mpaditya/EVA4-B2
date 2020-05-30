@@ -3,6 +3,7 @@
 **Best Test Accuracy:** 90.16%
 
 **Training Set Transforms:**
+
 HorizontalFlip
 
 Normalize
