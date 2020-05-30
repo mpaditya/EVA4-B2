@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May 30 19:26:55 2020
 
-@author: ASUS
-"""
 
 import torch
 from torch.nn import functional as F
