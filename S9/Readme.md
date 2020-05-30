@@ -1,4 +1,4 @@
-## Assignment S9 Main Notebook: EVA4_S9_Aditya.ipynb
+## Assignment S9: EVA4_S9_Aditya.ipynb
 
 **Best Test Accuracy:** 90.16%
 
