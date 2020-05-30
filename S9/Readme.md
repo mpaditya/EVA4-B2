@@ -20,3 +20,6 @@ HueSaturationValue
 Normalize
 
 
+## Quiz S9: EVA4_Quiz9_Aditya.ipynb
+
+**Best Test Accuracy:** 88.67%
