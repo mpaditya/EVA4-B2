@@ -1,6 +1,6 @@
 ## Assignment S10: EVA4_S10_Aditya.ipynb
 
-**Best Test Accuracy:** 90.16%
+**Best Test Accuracy:** 91.57%
 
 **Training Set Transforms:**
 
@@ -14,4 +14,4 @@ HueSaturationValue
 
 **Cutout**
 
-LR FInder was implemented. Best LR was found to be 
+LR FInder was implemented. Best LR was found to be 0.058
