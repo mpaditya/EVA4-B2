@@ -2,7 +2,7 @@
 
 ### Dataset Creation
 
-Disclosure: I got the fg and bg images from AK and have used them for my analysis. 
+**Disclosure:** I got the fg and bg images from AK and have used them for my analysis and subsequent data set generation. 
 
 #### Background (bg)
  - Background images like in a mall, inside a kitchn, inside a bedroom, street image etc.
