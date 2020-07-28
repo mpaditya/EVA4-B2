@@ -34,12 +34,12 @@
 #### Foreground Overlayed on Background Depth Map (fg_bg_depth)
  - For every foreground overlayed on background, its corresponding depth map was generated.
  - A pre-trained monocular depth estimation model [DenseDepth](https://github.com/ialhashim/DenseDepth/blob/master/DenseDepth.ipynb) was used to generate the depth maps.
+ - Resize/scale image size since the Depth model expects 448X448 as input size
+ - Zipfile kept getting corrupted. Also, Colab frequently crashed or session ends after few hours. So while reading zipfile, we filter for 10 bg at a time (so totally 10*4000    images per bg = 40k images) and produce the depth maps for these 40k which are written on to a Zip File. Next time, the next 10 bg are filtered and depth maps are produced for them and appended to the same zip file and so on.
  - Image was stored as a grayscale image.
  - Number of images: 400,000
 
 <img src="DenseDepth-master/Images/depth.png">
-
-Zipfile kept getting corrupted. Also, Colab frequently crashed or session ends after few hours. So while reading zipfile, we filter for 10 bg at a time (so totally 10*4000 images per bg = 40k images) and produce the depth maps for these 40k which are written on to a Zip File. Next time, the next 10 bg are filtered and depth maps are produced for them and appended to the same zip file and so on.
 
 The fg_bg images, depth images and mask images were generated using the notebook "EVA4_S15A_DepthModel_Aditya_1.ipynb"
 
