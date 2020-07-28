@@ -13,7 +13,6 @@
 #### Foreground (fg)
  - Images of objects with transparent background
  - The Foreground objects include Batman, dogs, cats, people etc.
- - Using GIMP, the foreground was cutout and the background was made transparent.
  - Number of images: 100 (100 flipped images created while creating fg_bg mentioned below)
 
 <img src="Images/fg.png">
