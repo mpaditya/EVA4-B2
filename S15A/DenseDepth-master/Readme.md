@@ -38,7 +38,7 @@
  - Image was stored as a grayscale image.
  - Number of images: 400,000
 
-<img src="Images/fg_bg_depth.png">
+<img src="Images/depth.png">
 
 
 ### Dataset Statistics
