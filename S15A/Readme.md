@@ -3,7 +3,7 @@
 **Disclosure:** I got the fg and bg images from AK and have used them for my analysis and subsequent data set generation. 
 
 #### Background (bg)
- - Background images like in a mall, inside a kitchn, inside a bedroom, street image etc.
+ - Background images like in a mall, inside a kitchen, inside a bedroom, street image etc.
  - 100 such images were downloaded from the internet.
 
 <img src="DenseDepth-master/Images/bg.png">
@@ -39,6 +39,7 @@
 
 <img src="DenseDepth-master/Images/depth.png">
 
+Zipfile kept getting corrupted. Also, Colab frequently crashed or session ends after few hours. So while reading zipfile, we filter for 10 bg at a time (so totally 10*4000 images per bg = 40k images) and produce the depth maps for these 40k which are written on to a Zip File. Next time, the next 10 bg are filtered and depth maps are produced for them and appended to the same zip file and so on.
 
 The fg_bg images, depth images and mask images were generated using the notebook "EVA4_S15A_DepthModel_Aditya_1.ipynb"
 
