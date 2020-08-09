@@ -1,3 +1,8 @@
+### Problem Statement:
+We have 2 inputs: one with only background images (bg) and the other with various foreground objects overlayed on these backgrounds (fg_bg). We also have the Ground Truths for the masks for the foreground objects as well as the depth estimated values as inputs. Ussing these, the objective is to build a supervised learning system that is capable of:  	1. Learning the foreground object's mask in every image by separating out the foreground object using the bg and fg_bg image
+	2. Producing the depth map for each image
+
+
 ### Model Architecture:
 Most of the existing methods in literature use an encoder-decoder approach for Depth estimation. Even the popular method for segmentation, Unet, follows this approach (even though we are not doing pixel-wise classification here). In fact, the DenseDepth model which was used to generate the Ground Truth Depth maps itself (as a substitute for depth sensors) used a pretrained DenseNet model for encoder and a bilinear upsampling and 2 Conv layers for the decoder. 
 
