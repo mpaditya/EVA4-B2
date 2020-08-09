@@ -17,7 +17,7 @@ Also, the input as well as output images are stored on to Drive after every epoc
 
 
 ### Data Augmentation:
-Since we are trying to do depth estimation, some of the geometric data augmentation techniques like flipping, rotation etc. might cause distortions and cause problems for the network to learn. So, only Color Intensity based strategies like Hue Saturation were tried but did not make any noticeable difference for both depth and mask prediction. So, they were dropped for the final run on (192X192) images. So finally the only transforms applied on both train and test was Normalize and Resize and converted ToTensor.
+Since we are trying to do depth estimation, some of the geometric data augmentation techniques like flipping, rotation etc. might cause distortions and cause problems for the network to learn. So, only Color Intensity based strategies like Hue Saturation were tried but did not make any noticeable difference for both depth and mask prediction. So, they were dropped for the final run. So finally the only transforms applied on both train and test was Normalize and Resize and converted ToTensor.
 
 ### Loss Function:
 
