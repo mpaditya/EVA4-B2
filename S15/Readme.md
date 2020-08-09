@@ -56,6 +56,7 @@ The Dice+BCE was doing marginally better so that was adopted for the final run.
 	2. SSIM loss: This is a structural similarity index based loss
 	3. Edge Loss: This is L1 loss defined over the gradient of the depth image
 
+### Notebook for main code implementation: https://github.com/mpaditya/EVA4-B2/blob/master/S15/EVA4_S15B_Aditya.ipynb
 ### Results:
 
 The average IoU of the predicted fg masks on the test set is 0.81. The average RMSE of the depth predictions on the test set is 0.07. Also,  80% of the depth predictions lie within (1.25) times of their corresponding pixel-wise ground truth values but this quickly rise to 95% for lying within (1.25*1.25) times. The sample input (overlayed fg_bg images) and outputs (both predicted and actual depth and mask images) are shown below for the test set:
