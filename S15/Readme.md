@@ -58,4 +58,5 @@ The Dice+BCE was doing marginally better so that was adopted for the final run.
 
 ### Results:
 
-The average IoU of the predicted fg masks on the test set is _. The average RMSE of the depth predictions on the test set is _. Also, we can see that _ % of the depth predictions lie within (1.25) times of their corresponding pixel-wise ground truth values but this quickly rise to _% for lying within (1.25*1.25) times. The sample input (overlayed fg_bg images) and outputs (both predicted and actual depth and mask images) for 64X64 are shown below for different epochs of ____. 
+The average IoU of the predicted fg masks on the test set is 0.81. The average RMSE of the depth predictions on the test set is 0.07. Also,  80% of the depth predictions lie within (1.25) times of their corresponding pixel-wise ground truth values but this quickly rise to 95% for lying within (1.25*1.25) times. The sample input (overlayed fg_bg images) and outputs (both predicted and actual depth and mask images) are shown below for the test set:
+
