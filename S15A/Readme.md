@@ -41,7 +41,7 @@
 
 <img src="DenseDepth-master/Images/depth.png">
 
-The fg_bg images, depth images and mask images were generated using the notebook "EVA4_S15A_DepthModel_Aditya_1.ipynb"
+The fg_bg images, depth images and mask images were generated using the notebook https://github.com/mpaditya/EVA4-B2/blob/master/S15A/EVA4_S15A_DepthModel_Aditya_1.ipynb
 
 ### Dataset Statistics
 
@@ -52,7 +52,7 @@ The fg_bg images, depth images and mask images were generated using the notebook
 | **Foreground-Background Mask** | (192,192,1) | (0.0970) | (0.283) |
 | **Foreground-Background Depth** | (224,224,1) | (0.429) | (0.254) |
 
-The statistics were generated using the notebook "EVA4_S15A_Stats_Aditya.ipynb"
+The statistics were generated using the notebook https://github.com/mpaditya/EVA4-B2/blob/master/S15A/EVA4_S15A_Stats_Aditya.ipynb
 
 ### Dataset Link
 
