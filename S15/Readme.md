@@ -19,18 +19,6 @@ Also, the input as well as output images are stored on to Drive after every epoc
 ### Data Augmentation:
 Since we are trying to do depth estimation, some of the geometric data augmentation techniques like flipping, rotation etc. might cause distortions and cause problems for the network to learn. So, only Color Intensity based strategies like Hue Saturation were tried but did not make any noticeable difference for both depth and mask prediction. So, they were dropped for the final run on (192X192) images. So finally the only transforms applied on both train and test was Normalize and Resize and converted ToTensor.
 
-
-### Evaluation Metric:
-We can build all the wonderful models that we want. But how do we know how good the model really is? How do we know if the model's performance is really improving (and hence model is learning) with every epoch? If we select an inappropriate evaluation criterion, we may be lulled into thinking our model is doing great when actually it isn't. 
-We need to define an evaluation metric separately for Depth and Mask prediction. 
-
-For **Mask Prediction**, each pixel output is binary (either it is 0-black or 1-white) and our objective is to get the model to predict the foreground object's mask (white) as accurately as possible. 
-We may be tempted to think a pixel-wise accuracy average is good enough. But if the fg object is occupies a small part of the overall image (say < 10% of the total pixels), then the model can get the mask of the fg object horribly wrong & still get good accuracy by just predicting most pixels as 0. 
-So, the commonly used metrics for mask prediction are IoU (intersection over union) and Dice Coefficient (F-score). Both are closely related and it is sufficient to use either one. We shall use IoU.
-
-For **Depth Prediction**, every pixel we predict the depth value (quantitative value for depth in [0,1]). So here, unlike mask metric which is more like a classification metric (0 or 1), we need a metric to quantify how different the depth value is from the ground truth (more like a regression metric). We can have multiple metrics for this. The most common metric is RMSE. The other metrics that are used are a threshold based metric - to see if the predicted values lie within (1.25) times the actual value and so on. The reason for using this is to capture the distribution of the predictions around the actual values (RMSE is a single average loss metric - which could be high because of a few pixels which had very different values (outliers) or because most of the pixels were off by a moderate amount; so this threshold metric helps identify this)
-
-
 ### Loss Function:
 
 **Mask Loss -** There are 2 common loss functions used in segmentation tasks: 
@@ -55,6 +43,20 @@ The Dice+BCE was doing marginally better so that was adopted for the final run.
 	1. Depth Loss: This is pixel-wise L1 loss (absolute value of difference)
 	2. SSIM loss: This is a structural similarity index based loss
 	3. Edge Loss: This is L1 loss defined over the gradient of the depth image
+
+
+### Evaluation Metric:
+We can build all the wonderful models that we want. But how do we know how good the model really is? How do we know if the model's performance is really improving (and hence model is learning) with every epoch? If we select an inappropriate evaluation criterion, we may be lulled into thinking our model is doing great when actually it isn't. 
+We need to define an evaluation metric separately for Depth and Mask prediction. 
+
+For **Mask Prediction**, each pixel output is binary (either it is 0-black or 1-white) and our objective is to get the model to predict the foreground object's mask (white) as accurately as possible. 
+We may be tempted to think a pixel-wise accuracy average is good enough. But if the fg object is occupies a small part of the overall image (say < 10% of the total pixels), then the model can get the mask of the fg object horribly wrong & still get good accuracy by just predicting most pixels as 0. 
+So, the commonly used metrics for mask prediction are IoU (intersection over union) and Dice Coefficient (F-score). Both are closely related and it is sufficient to use either one. We shall use IoU.
+
+For **Depth Prediction**, every pixel we predict the depth value (quantitative value for depth in [0,1]). So here, unlike mask metric which is more like a classification metric (0 or 1), we need a metric to quantify how different the depth value is from the ground truth (more like a regression metric). We can have multiple metrics for this. The most common metric is RMSE. The other metrics that are used are a threshold based metric - to see if the predicted values lie within (1.25) times the actual value and so on. The reason for using this is to capture the distribution of the predictions around the actual values (RMSE is a single average loss metric - which could be high because of a few pixels which had very different values (outliers) or because most of the pixels were off by a moderate amount; so this threshold metric helps identify this)
+
+
+
 
 ### Notebook for main code implementation: https://github.com/mpaditya/EVA4-B2/blob/master/S15/EVA4_S15B_Aditya.ipynb
 ### Results:
